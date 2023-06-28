@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import Layout from './Layout/layout';
+import AddTrain from './Page/AddTrain';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import AddCategory from './Page/addCategory';
+import AddStation from './Page/AddStation';
+import AddMessage from './Page/AddMessage';
+import AddMarquee from './Page/AddMarquee';
+import ActionMarquee from './Page/ActionMarquee';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/train" element={<AddTrain />} />
+        <Route path="/category" element={<AddCategory />} />
+        <Route path="/station" element={<AddStation />} />
+        <Route path="/message" element={<AddMessage />} />
+        <Route path="/marquee" element={<AddMarquee />} />actionMarquee
+        <Route path="/actionMarquee" element={<ActionMarquee />} />
+      </Routes>
+    </Layout>
   );
 }
 
